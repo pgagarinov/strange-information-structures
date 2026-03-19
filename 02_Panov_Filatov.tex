@@ -1,0 +1,966 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\graphicspath{{/Users/peter/_Git/_SETI/strange-information-structures/}}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{hyperref}
+
+\geometry{a4paper, margin=2.5cm}
+
+% Define gray for table cells
+\definecolor{lightgray}{gray}{0.85}
+\definecolor{darkgray}{gray}{0.55}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\thepage\quad Strange Information Structures of the Genetic Code}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries 2}\\[0.5em]
+{\Large\bfseries Are the Strange Information Structures\\
+of the Genetic Code an Accident\\
+or an Artifact?}
+
+\vspace{1em}
+
+{\large Alexander D.\ Panov}\\[0.3em]
+{\small Skobeltsyn Institute of Nuclear Physics of Lomonosov Moscow State University}
+
+\vspace{0.5em}
+
+{\large Felix P.\ Filatov}\\[0.3em]
+{\small I.I.\ Mechnikov Research Institute of Vaccines and Sera,\\
+Gamaleya National Research Center for Epidemiology and Microbiology, Moscow, Russia}
+
+\vspace{0.5em}
+
+{\small\itshape Evolution: Environmental, Demographic, and Political Risks 2024, pp.\ 23--68\\
+DOI: 10.30884/978-5-7057-6399-3\_03}
+\end{center}
+
+\vspace{2em}
+
+\noindent\textbf{Abstract}
+
+\noindent\textit{The universal genetic code has several strange symmetries, the biochemical significance of which remains unclear. In addition, it is possible to construct many numerical signatures, usually related to divisibility by 111, from the weights of the amino acids encoded by the genetic code. This article is based on the work of Vladimir Shcherbak and Maxim Makukov (2013), in which many such independent information structures were obtained for the first time. In the current work several new information structures are found, and it is shown that their entire collection naturally divides into five `information levels', the first two of which are particularly simple and resemble the `attention signals' known in the practice of searching for signals of extraterrestrial intelligence in the SETI problem. The method of analysis used in the article differs significantly from the Shcherbak -- Makukov approach and is based on the systematic use of the `simplicity criterion'. The article presents in detail both new and known information signatures of the genetic code and discusses the prospects for resolving the question of the accident or artificial nature of these strange information structures.}
+
+\medskip
+\noindent\textit{\textbf{Keywords:} origin of life, astrobiology, exobiology, genetic code.}
+
+\setcounter{page}{23}
+
+\section{Introduction}
+
+The title of the article should be taken literally: the content of the article is a detailed explanation of the question posed in the title. No definite answer to this question is given, but possible scenarios of the development of the topic are considered. The paper establishes the existence of the alternative `accidental/artificial' with respect to strange information structures that do exist in the genetic code and argues the validity of the question posed in the title of the article. Artificiality of the mentioned information structures (the second of the possibilities presented in the alternative) means extraterrestrial origin of terrestrial life, so it brings the whole problem into the field of astrobiology and SETI problems.
+
+The idea that the genetic code may contain information signaling about artificial interference in the origin of terrestrial life was first formulated by G.~Marx (1979). He wrote that the genetic code, because of its extreme stability and conservatism, is the most reliable carrier of information of a biological nature, although the amount of information it can contain is small (shorter than 40-letters long text in a conventional alphabet). Marx noted, however, that at the time of his writing no evidence of information other than coding rules had been found in this carrier. Serious searches for such information in the structures of the genetic code were undertaken in the works of Vladimir Shcherbak and Maxim Makukov (Shcherbak and Makukov 2013; Makukov and Shcherbak 2018), and these searches led to the discovery of a large number of non-trivial information patterns in it. These articles served as the starting point for the present work.
+
+What could the signature of artificiality in a genetic code look like? It could be numerical relationships associated to the structure of the code, that do not seem accidental, but whose natural origin has no explanation; unexpected symmetries of the code, \textit{etc}. The search for such `peculiarities' of the code may cause a reproach to numerology. However, what else could such information signatures look like? Here it is important not to fall into unwitting fitting and manipulation of numbers and to use the relations `lying on the surface', to avoid too complex and artificial combinatorial constructions and to pay attention to what in a certain sense satisfies the criterion of `naturalness and simplicity'. At least this is where we should start.
+
+The articles by Shcherbak and Makukov, however, start immediately with rather complicated constructions. For our part, we tried to follow strictly the aforementioned criterion of naturalness and simplicity explicitly. Our approach also allowed us to notice a new feature of unusual information patterns found in the genetic code: they are naturally arranged on several information levels in the order of increasing complexity and in the order of attracting new resources for information representation. Moreover, the first two simplest levels resemble the `attention signal' that is often assumed to be present in messages from extraterrestrial intelligence, and which is actually present in real terrestrial messages already sent to extraterrestrial intelligence from us (Zaitsev 2008). Our approach also provided additional support for a more sophisticated approach to the topic, which was used in the work of Shcherbak and Makukov.
+
+In this paper, we will consistently present all known to us non-trivial information patterns of the genetic code. For the sake of brevity, we will simply call such structures signatures, without implying that they necessarily mean anything. Not all the constructions in Shcherbak and Makukov's work seem to us to be flawless. In our review we will present some new signatures as well as signatures found by Shcherbak and Makukov themselves (partly reinterpreted), which are not objectionable, as well as signatures known from even earlier works (related to the so-called Rumer symmetry, see below). In the course of the review we will clarify whether the signature under discussion is new or already known from previous studies. The main order of the presentation will follow the increasing complexity of the information levels mentioned above.
+
+Our presentation will conclude with a discussion of the results obtained and further perspectives.
+
+We will begin with a short presentation of the structure of the genetic code, which will also allow us to introduce the necessary terminology.
+
+\section{The Genetic Code Table}
+
+The table of the genetic code, known from all textbooks (see Fig.~1), was proposed by Francis Crick (1968). Since each coding product (amino acid or \textbf{stop} signal) is defined by a triplet of nucleotides (bases), also called a codon, the code table would have the form of a three-dimensional matrix of $4 \times 4 \times 4$, indexed on each side by four nucleotides, for example, in the order Thymine-Cytosine-Adenine-Guanine (T-C-A-G in single-letter notations, see Fig.~2). Each triplet of nucleotides corresponds to one cell in the matrix, where the amino acid encoded by that codon or the stop signal is located. An ordinary two-dimensional table or matrix has rows and columns located in the horizontal plane of a `sheet of paper', in a three-dimensional matrix vertical columns are added (see Fig.~2). We can say that a three-dimensional matrix is a two-dimensional matrix with vertical columns in its cells. A three-dimensional matrix is inconvenient to represent on a two-dimensional sheet of paper. Thus, in Fig.~1 the third dimension corresponding to the third base in the codon is not placed as a vertical column under a cell of the two-dimensional matrix, as in Fig.~2, but `lying down', so that each of the cells of the two-dimensional table indexed by the first two bases of the codon is itself a column of four cells that are numbered by the third base. Since the contents of these larger cells actually come from the vertical columns of the three-dimensional matrix, we will still refer to them as columns. Thus, each column contains four coding products at constant first two codon bases and a changing third base.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.75\textwidth]{fig1_genetic_code_table.png}\\[0.5em]
+\includegraphics[width=0.75\textwidth]{fig1_calligram.png}
+
+\caption{Table of the universal genetic code in Crick's form and its calligram. The coding products (amino acids) are indicated by one-letter symbols, the triplets terminating translation are indicated by the word \textbf{stop}. The gray cells refer to Rumer octet~\textbf{I}, the rest refer to octet~\textbf{II} (see text)}
+\label{fig:genetic_code}
+\end{figure}
+
+The bases T, C, A, G are represented by compounds of two types: T and C are pyrimidines, A and G are purines. We will use the standard notation Y for pyrimidines and R for purines. Furthermore, we will denote the set of bases (T, C, A) by H, and the whole set of bases (T, C, A, G) by V (see Table~1).
+
+In the table of the genetic code in Fig.~1, the standard one-letter notations \textbf{F}, \textbf{L},~\ldots\ are used to label amino acids. Table~2 shows the full names of all 20 amino acids in the genetic code together with their standard one-letter and three-letter notations. The table also gives the total atomic weight $M$ of each free amino acid (otherwise called mass number): the sum of atomic weights of its constituent atoms (for each atom, the number of protons together with neutrons in the nucleus), and for each atom the atomic weight of its most abundant stable isotope is taken: for hydrogen 1, for carbon 12, for nitrogen 14, for oxygen 16, and so on.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.5\textwidth]{fig2_3d_cube_top.png}\\
+\includegraphics[width=0.5\textwidth]{fig2_3d_cube_bottom.png}
+\caption{Three-dimensional matrix indexed by bases T, C, A, G}
+\label{fig:3d_matrix}
+\end{figure}
+
+Each amino acid consists of a constant part and a side chain (see Fig.~3). The constant parts of all amino acids with the sole exception of proline (\textbf{P}, \textbf{Pro}) are the same and have an atomic weight of 74. The constant part of proline has an atomic weight of 73. The side chains have a variety of atomic weights $M_{Side}$, which are also listed in Table~2.
+
+\begin{table}[htbp]
+\centering
+\caption{Notations for groups of bases}
+\label{tab:notations}
+\begin{tabular}{|c|l|}
+\hline
+\textbf{Notation} & \textbf{Group of bases} \\
+\hline
+Y & (T, C) -- pyrimidines \\
+R & (A, G) -- purines \\
+H & (T, C, A) \\
+N & (T, C, A, G) -- any base \\
+M & (T, G) -- the first Rumer pair \\
+K & (C, A) -- the second Rumer pair \\
+\hline
+\end{tabular}
+\end{table}
+
+As can be seen from the table of the genetic code in Fig.~1, in most cases several different codons correspond to one coding product. This is the so-called degeneracy of the genetic code. In some cases, all codons of one column encode the same product. We will call such columns homogeneous. In Fig.~1, they are marked in gray. In other cases one column encodes different products, we will call them heterogeneous, such columns are left uncolored. We will compare a simple picture with the table of genetic code, which we will call a calligram. A calligram is a $4 \times 4$ square, the cells of which are shaded black if they correspond to homogeneous columns of the genetic code table (gray in Fig.~1), and left unshaded if they correspond to heterogeneous columns (unshaded in Fig.~1). The calligram corresponding to the basic genetic code table is shown in Fig.~1 on the right. Later we will consider other representations of the genetic code table, to which other calligrams will correspond. Let us now proceed step by step to the representation of the non-trivial information structures of the genetic code.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.4\textwidth]{fig3_amino_acid.png}
+\caption{Amino acid structure: constant part and side chain}
+\label{fig:amino_acid}
+\end{figure}
+
+\begin{table}[htbp]
+\centering
+\caption{Amino acids and their atomic weights}
+\label{tab:amino_acids}
+\begin{tabular}{|l|c|c|c|c||l|c|c|c|c|}
+\hline
+\textbf{Amino acid} & & & $M_{Side}$ & $M$ & \textbf{Amino acid} & & & $M_{Side}$ & $M$ \\
+\hline
+Glycine & \textbf{G} & \textbf{Gly} & 1 & 75 & Asparginic acid & \textbf{D} & \textbf{Asp} & 59 & 133 \\
+Alanine & \textbf{A} & \textbf{Ala} & 15 & 89 & Glutamine & \textbf{Q} & \textbf{Gln} & 72 & 146 \\
+Serine & \textbf{S} & \textbf{Ser} & 31 & 105 & Lysine & \textbf{K} & \textbf{Lys} & 72 & 146 \\
+Proline & \textbf{P} & \textbf{Pro} & 42 & 115 & Glutamic acid & \textbf{E} & \textbf{Glu} & 73 & 147 \\
+Valine & \textbf{V} & \textbf{Val} & 43 & 117 & Methionine & \textbf{M} & \textbf{Met} & 75 & 149 \\
+Threonine & \textbf{T} & \textbf{Tre} & 45 & 119 & Histidine & \textbf{H} & \textbf{His} & 81 & 155 \\
+Cysteine & \textbf{C} & \textbf{Cys} & 47 & 121 & Phenylalanine & \textbf{F} & \textbf{Phe} & 91 & 165 \\
+Leucine & \textbf{L} & \textbf{Leu} & 57 & 131 & Arginine & \textbf{R} & \textbf{Arg} & 100 & 174 \\
+Isoleucine & \textbf{I} & \textbf{Ile} & 57 & 131 & Tyrosine & \textbf{Y} & \textbf{Tyr} & 107 & 181 \\
+Aspargin & \textbf{N} & \textbf{Asn} & 58 & 132 & Tryptophan & \textbf{W} & \textbf{Trp} & 130 & 204 \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\section{The First Information Level. Rumer Symmetry and Related Symmetries of the Genetic Code}
+
+Without going into speculation about the origin of the code, Francis Crick called it a `frozen accident'. Later, three different theories were proposed that explain the structure of the code to a certain extent (Nikitin 2016): the theory of optimization for the minimum of protein synthesis errors, the theory of structural correspondence of amino acids to codons (key-lock), and the theory of coevolution of codons and amino acid biosynthesis pathways. However, it turned out that the genetic code has some unexpected formal properties, that, to the extent of common understanding, cannot be explained in a simple and unambiguous way within the framework of modern concepts related to biochemistry or evolution.
+
+Yuri Rumer was the first to draw attention to them (Rumer 2013; Konopelchenko and Rumer 1975). Trying to find a rational basis for the structure of the genetic code, he combined homogeneous columns into one set and heterogeneous columns into another. The number of columns in each set was eight (see Fig.~1), so these two sets were called octets; we will refer to them with the Roman numerals \textbf{I} and \textbf{II}. Octet \textbf{I} corresponds to homogeneous columns, octet \textbf{II} to heterogeneous columns. Rumer's classification is not trivial, since the ratio of the number of columns in the two sets could well be different, and indeed is different in some existing rare alternative genetic codes (see Section~9.3.).
+
+Quite unexpectedly, octets \textbf{I} and \textbf{II} turn out to be related by a simple symmetry transformation: $R = (\text{T} \leftrightarrow \text{G}, \text{C} \leftrightarrow \text{A})$, which we will call the Rumer transformation. In this base swapping, each column of octet \textbf{I} goes to some column of octet \textbf{II} and vice versa. For example, the CT column of octet \textbf{I} goes to the AG column of octet \textbf{II}, the AG column goes to CT, and so on.
+
+The presence of this strange symmetry is, on the one hand, easy to detect, as well as the very existence of the octets, but on the other hand, it cannot be understood from the point of view of the special role of this symmetry in the functioning of the genetic code. If we assume that in the presence of two octets, the rest of the genetic code is randomly arranged, then the conditional probability of the appearance of the Rumer symmetry is 1/256, \textit{i.e.}\ this symmetry looks rather unlikely, fragile and optional in a functional sense (which is confirmed by its absence in some alternative genetic codes).
+
+It should be noted that this symmetry has been independently rediscovered at least twice since Rumer (Danckwerts and Neubert 1975; Wilhelm and Nikolajewa 2004), because it is easy to detect, as it literally `lies on the surface', but it does not attract the attention of biochemists, as the link between this symmetry and the functions of the genetic code is not recognized.
+
+The Rumer symmetry is now well known. It is discussed in particular in the works of Shcherbak and Makukov. Let us take a new step in the analysis of these symmetries. Note that Fig.~1 shows only one of the possible ways of representing the genetic code table. Other natural ways of representation can be obtained by changing the order of the bases (T-C-A-G) on the sides of the matrix to another order, \textit{i.e.}, by subjecting this row to a permutation.
+
+As it is easy to understand, when rearranging the bases on the sides of the matrix, the columns of the table will somehow change places, and within the columns the third base of the codons will also appear in a different order, but the full set of coding products in the columns will remain unchanged. Therefore, if some column belonged to the octet \textbf{I}, it will still belong to the octet \textbf{I} after any rearrangement of the bases on the sides of the table, and the columns of the octet \textbf{II} will not change their nature either. Therefore, the Rumer octets are invariant to transformations given by permutations in a string of four symbols: under such transformations, the octets \textbf{I} and \textbf{II} pass into themselves. Any two successive permutations give some new permutation, there is an identity permutation which leaves the base string unchanged, and every permutation has a reverse permutation which returns the base string to its original state. All this means that the permutations form a group of transformations,\footnote{A group is a mathematical structure, denoted $G$, which is a set over whose elements a binary operation, usually called multiplication, is defined and which has the following properties: 1) there exists a unit element $e$ such that for any element $\boldsymbol{a}$ of $G$\ $\boldsymbol{a} \cdot \boldsymbol{e} = \boldsymbol{e} \cdot \boldsymbol{a} = \boldsymbol{a}$; 2) for any element $\boldsymbol{a}$ of $G$, there exists an inverse element $\boldsymbol{a}^{-1}$ such that $\boldsymbol{a} \cdot \boldsymbol{a}^{-1} = \boldsymbol{a}^{-1} \cdot \boldsymbol{a} = \boldsymbol{e}$; 3) multiplication is associative: $\boldsymbol{a} \cdot (\boldsymbol{b} \cdot \boldsymbol{c}) = (\boldsymbol{a} \cdot \boldsymbol{b}) \cdot \boldsymbol{c}$. The main applications of group theory are related to the fact that a variety of transformations, such as rotations of a figure, translating a figure into itself (called the symmetry of that figure), permutations of symbols in a string, \textit{etc.}\ form groups. A group multiplication is a consecutive application of two transformations, the unit of a group is an identical transformation that changes nothing, and an inverse transformation for any transformation is one that returns the object to its original form, \textit{e.g.}, for a rotation of a figure -- a rotation by the same angle in the opposite direction, \textit{etc.}} and the group of permutations of four elements is a symmetry group of Rumer octets in the sense that Rumer octets do not change under transformations of this group.
+
+Fig.~1 shows that the structure of the regions of the calligram corresponding to octets \textbf{I} and \textbf{II} is rather complicated. The question arises: is it possible to visualize it by rearranging the order of the bases on the sides of the table, so that the regions corresponding to octets \textbf{I} and \textbf{II} take a simpler form? In particular, in Fig.~1, each of the regions \textbf{I} and \textbf{II} is not connected (moreover, each of them consists of three separate parts). Could it be that there are such arrangements of bases on the sides of the table of the genetic code that each of the regions corresponding to octets \textbf{I} and \textbf{II} were connected, \textit{i.e.}\ had no breaks?
+
+To answer these questions, it is necessary to analyze the calligrams corresponding to all the possible arrangements of bases on the sides of the table of the genetic code. There are in total $4! = 1 \cdot 2 \cdot 3 \cdot 4 = 24$ such variants. It is not necessary to consider all 24 calligrams because half of them can be obtained by inverting the calligram with respect to the center of the square (matrix), which is also equivalent to rotating the matrix by $180^\circ$. Such an operation does not change the figure in essence.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{fig4_calligrams_top.png}\\[1em]
+\includegraphics[width=0.9\textwidth]{fig4_calligrams_bottom.png}
+
+\caption{All 12 non-trivial calligrams corresponding to all possible representations of the table of the genetic code. Another 12 calligrams are obtained by rotating the calligrams in the figure by $180^\circ$ (or by inversion relative to the center), which corresponds to the mirror reflection of the sequence of bases of each calligram}
+\label{fig:calligrams}
+\end{figure}
+
+Fig.~4 shows all 12 non-trivial calligrams, from which the other 12 can be obtained by $180^\circ$ rotation. The calligram corresponding to the original representation of the table in Fig.~1 is in the upper left corner of Fig.~4. It can be seen that this calligram is not very simple compared to the others. Only two calligrams are particularly simple: CTGA and ATGC. Their simplicity is expressed in the fact that each of the octets \textbf{I} and \textbf{II} in these calligrams is represented by a connected area, that is a continuous area without breaks.
+
+It turns out that all the connected calligrams (there are four of them: two, which are shown in Fig.~4, and two more, which are obtained from them by rotating by $180^\circ$) are related by the permutation of bases corresponding to the Rumer transformation and through two more transformations directly related to the Rumer transformation. Along with the Rumer transformation $R = (\text{T} \leftrightarrow \text{G}, \text{C} \leftrightarrow \text{A})$, let us consider two more transformations that are in some sense `halves' of the Rumer transformation: $R_1 = (\text{T} \leftrightarrow \text{G})$, $R_2 = (\text{C} \leftrightarrow \text{A})$. In the group-theoretic sense, $R = R_1 \cdot R_2$, $R_1 = R \cdot R_2$, $R_2 = R \cdot R_1$, and it is easy to check that all three transformations together with the identity transformation form a group (it is a subgroup of the group of all permutations) which turns out to be the symmetry group of connected calligrams: the property of connectedness is an invariant of this group of transformations. Fig.~5 shows how all connected calligrams are transformed through each other by the transformations $R$, $R_1$, $R_2$ (in mathematics, figures of this kind are called commutative diagrams). Not only do all connected calligrams turn out to be related to each other by means of a simple group of transformations directly related to the Rumer transformation, but the picture itself (see Fig.~5) has an amazing symmetry. It is easy to see that it is symmetric with respect to inversion or with respect to $180^\circ$ rotation. The calculations show that the probability of such additional symmetry in the presence of Rumer symmetry is 1/4, that is the total probability of obtaining Rumer symmetry together with the symmetry of the connected calligrams, in the presence of Rumer octets, is $1/256 \times 1/4 = 1/1024$.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.5\textwidth]{fig5_commutative.png}
+\caption{Action of the group of transformations of connected calligrams (see text)}
+\label{fig:commutative}
+\end{figure}
+
+As long as we could not see any hidden formal meaning in the Rumer symmetries, all this could be interpreted as an amusing accident. However, these surprising symmetries can serve as a kind of `attention signal': they suggest that octets \textbf{I} and \textbf{II} should be examined more closely. Note that at this stage it is not even too important how `strange' the Rumer symmetries are in the sense of small probabilities favoring their occurrence; what is important is that the presence of these symmetries inevitably draws attention to Rumer octets as such.
+
+
+\section{Second Information Level. Signatures of Full Weights of Coding Products}
+
+Taking into account the `hint' received from the side of the Rumer symmetry, let us deepen the analysis by attracting new types of data. From this point of view, all the information associated with the Rumer symmetries and with additional symmetries of connected calligrams (see Section~3) represent the first level of information signatures of the genetic code. Our advance into the depth is justified by the above-mentioned `attention signal', but we will still avoid complex constructions and consider only signatures of maximum `simplicity and naturalness'.
+
+For this purpose, we turn our attention to the full masses of the coding products (see Table~2). In order to count the masses of any group of encoding products, we would like to assign a weight to each encoding product, but a non-trivial problem immediately arises here. The \textbf{stop} signal is also a coding product, but it is not a material object, it is a purely logical notion, it cannot naturally be assigned any weight, not even weight zero. Some things actually do have weight zero, for example, a photon, but the logical abstraction \textbf{stop} has no weight, which is simply not one of the properties of the concept \textbf{stop}. Therefore, we must artificially attach some weight to the \textbf{stop} signal. A fundamental and non-trivial ambiguity arises here (Shcherbak and Makukov did not pay attention to it). Let us emphasize this circumstance, since we will have to make use of it later. It seems that the simplest and most natural solution is to assign weight 0 to the \textbf{stop} signal, which we will do for now. Here it is important to realize that we have made a fundamentally important logical jump. The sums of the masses of the coding products, which we will deal with below, are now not real physical quantities. If the calculated sum of masses includes the `weight' of the \textbf{stop} signal, then this sum is a purely logical concept, and there is no point in even asking what biochemistry can explain such a sum. On a slightly different topic, similar explanations are given in the work by Shcherbak and Makukov (2013) (see Section~5).
+
+From our point of view, such a strong logical step would be completely inadmissible if the analysis were to start immediately with the full weights of the coding products without having the `attention signal' from the Rumer symmetries side. It is the presence of such a `signal' that justifies such a non-trivial logical step. The presence of this special logical step allows us to say that we have moved to a new level of complexity of analysis, which has been called the second information level in the title of this section. Another sign of the new information level is the inclusion of a new resource -- the full weights of the coding products.
+
+Now we notice that all coded amino acids consist of the so-called constant part and the side chain (see Fig.~3). The constant part of all amino acids, with a single exception, is the same and has a weight of 74, but the radicals are all different. This single exception is the amino acid proline \textbf{P} (weight of the constant part is 73), but the special role of the number 74 in our whole problem is quite obvious, because 19 out of 20 amino acids have exactly this value of the weight of the constant part.
+
+Now let us do a very simple procedure. Let us calculate the total weight of the products coded in each octet separately. In this case, we will count each product exactly as many times as it appears in the table (\textit{i.e.}, we count each cell separately). This seems to be the simplest and most natural way to count. For example, for the first octet column CT, the product \textbf{L} will be counted four times, for the second octet column TG, the product \textbf{C} will be counted twice, the \textbf{stop} signal will be counted once and \textbf{W} will be counted once, and so on. This gives a total weight number of 3700 for the first octet and 4218 for the second octet. By their very nature, these numbers are \textit{a priori} random integers, since they are obtained by summing up several integers, the masses of different amino acids, which are unrelated to each other. The masses of the amino acids do not obey any simple regularity (see Table~2).
+
+It turns out that each of these two numbers 3700 and 4218 is divisible by the `magic number' 74, which is already fixed \textit{a priori} by the context of the problem. There is no reason to expect that the full masses of the coding products of the octets constructed above will be integer multiples of the weight of the constant part assigned \textit{a priori} in the context of this problem, which is also, in a certain sense, a random number. Given the random nature of the numbers 3700 and 4218, we can estimate the probability of this strange coincidence. The probability that a random integer is divisible by 74 is $1/74$, while the probability that two independent random integers are both divisible by 74 is only $1/74 \times 1/74 = 1/5476$. All of this looks strange, to say the least, although a chance cannot be ruled out, of course. This signature was not noticed in the work of Shcherbak and Makukov, since they did not work with full masses of coding products. Their approach was more sophisticated from the very beginning (see Section~5).
+
+But that is not all. The weight of the second octet turns out to be of the special form $4218 = 4 \times 999 + 222$. The numbers of this form we will call Shcherbak-Makukov numbers (see Section~5). They play a leading role in the information signatures of the following levels.
+
+But that is not all again. The first Rumer octet is simpler than the second octet and seems to be in some sense more fundamental. If we arrange the coding products of the first octet in order of increasing weight (what could be simpler?), the first bases of the corresponding codons form the sequence GGTC|GACC, which is mirror-symmetric with respect to its center (marked $|$) in terms of complementarity;\footnote{Recall that in the formation of the DNA double helix, the structure of two adjacent strands is linked by the complementarity relation of the bases: $\text{G} \leftrightarrow \text{C}$, $\text{T} \leftrightarrow \text{A}$. That is, opposite to \textbf{G} there is always \textbf{C}, opposite to \textbf{T} there is always \textbf{A}.} nucleotide C is complementary to nucleotide G, nucleotide T is complementary to nucleotide A, and so on. The probability corresponding to this `strangeness' is not quite easy to estimate. What arises here is a special case of the so-called `corner search problem' (for more details see Section~9.2.). Applied to this situation, the problem looks like this. It is not difficult to calculate the probability of occurrence of mirror-complementary symmetry under the assumption of complete randomness of the sequence of bases, it is 1/256. But we should take into account that besides the existing symmetry there are other similar symmetries that would surprise us no less. For example, if there were not a mirror, but an exact repetition of the first four letters by complementarity. These are already two possibilities. Besides, it is possible to include in the analysis other relations between bases besides complementarity, among them at least Rumer's transformation pairs, complete identity of bases and transpositions inside the purine and pyrimidine pairs. Each of these relations is also included twice: for mirror symmetry and for exact repetition. In total, we have already obtained eight similar symmetries, so the probability obtained above should be multiplied by 8, we get $8/256 = 1/32$.
+
+Interestingly, if we consider only whether the base in the GGTCGACC string is purine (R) or pyrimidine (Y), then in addition to the already existing complementary mirror symmetry, we obtain a structure with shift symmetry: RRYYRRYY. Both these symmetries have been recognized in the article by Shcherbak and Makukov (2013).
+
+Thus, we descended one information level deeper in the complexity of the analysis and, as in the first information level, we did not come up empty-handed. Let us emphasize once again that in order to obtain numerical and symmetric patterns of the second level of complexity, we did not have to perform any complicated manipulations with digits, except for the artificial assignment of zero weight to the \textbf{stop} signal (which seems very simple at first glance). All the results are `on the surface' and are obtained naturally. In fact, the information patterns of the second level are so simple that we can say that both information levels play the role of `attention signals' in a sense. However, with the second information level, we have obtained a significant amplification of the `attention signal', which allows us to start looking for more subtle and complex information patterns of the genetic code. This provides a moral justification for more complex manipulations of the data under discussion.
+
+
+\section{The Third Information Level. Masses of Side Chains}
+
+The main information signature array of the article (Shcherbak and Makukov 2013) was not obtained using the full masses of amino acids, as we obtained the masses of octets \textbf{I} and \textbf{II} (3700 and 4218) at the second information level, but using the masses of amino acid side chains. Here, however, one surprising circumstance is revealed. A significant part of the information patterns appears only if one artificially adjusts the structure of the proline molecule, which has a non-standard weight of the constant part: 73 instead of 74. It is necessary to artificially (virtually!) transfer one hydrogen from the side chain of proline to the constant part, after which the weight of the side chain becomes 41 instead of the original 42, and the weight of the constant part becomes standard, that is 74. Shcherbak and Makukov call this mental operation an `activation key', which gives access to the main array of signatures of the genetic code. As correctly noted in the work by Shcherbak and Makukov (2013), all signatures acquire a virtual character: various sums of amino acid side chain weights, taking into account the proline correction are not something real, so the question of why these sums are such and not others loses its physical meaning.
+
+A problem similar to the one already discussed above arises again with the \textbf{stop} coding product. If we now consider not the full masses of the amino acids, but only the masses of the side chains, what weight of `side chain' should be assigned to the \textbf{stop} signal? Shcherbak and Makukov artificially assign a weight zero to the \textbf{stop} signal, and it is this and only this choice that leads to the large set of information patterns in the article (\textit{Ibid}.). In essence, not one `activation key' is used, as Shcherbak and Makukov believe, but two. The transition to the use of amino acid side chain weights together with the now two artificial adjustments marks the transition to the third information level of complexity.
+
+The artificial assignment of zero weight to the `side chain' of the \textbf{stop} signal has some interesting consequences that were not considered by Shcherbak and Makukov. After standardizing of the weight of the constant part, all masses of amino acid side chains are calculated as the total weight of the molecule minus 74. For uniform behavior of all coding products, one would assume that the same should be true for the \textbf{stop} signal. But in order to get zero for the \textbf{stop} side chain weight, we have to assume that the `total weight' of \textbf{stop} is not zero at all, as we assumed at the second information level (see Section~4), but 74. Only in this case we obtain the correct value for the `side chain' of the \textbf{stop} signal: $74 - 74 = 0$. The possibility of redefinition of the weight of the \textbf{stop} signal is consistent with the freedom to choose the full weight of the product \textbf{stop}, as we wrote above (see Section~4). Although the choice of zero value for the total weight of the \textbf{stop} signal seems to be the simplest, it is in a sense not the most logical (or correct).
+
+With this new understanding of the nature of the `total weight' of the \textbf{stop} signal, we can return to the calculation of the total masses of the Rumer octets (see Section~4). Nothing changes for the first octet with its total weight of 3700, since the \textbf{stop} signal is not included in the calculation of its weight, but the weight of the second octet changes from 4218 to 4440. This is the place where a small probabilistic miracle occurs. While 3700 and 4218 had a greatest common divisor of 74, which was already an unexpectedly large number, 3700 and 4440 have a greatest common divisor of 740! It turns out that assigning a total weight of 74 to the \textbf{stop} signal not only corresponds to the `activation key' of the signatures discovered by Shcherbak and Makukov, but also significantly strengthens the signature of the second information level, one of the two `attention levels'. But this, it turns out, is not all.
+
+Let us decompose the new common divisor 740 into multiples as follows:
+\begin{equation}
+740 = 2 \times 10 \times 37.
+\end{equation}
+Now let us notice that in our problem there are two numbers highlighted from the very beginning -- the weight of the constant part of amino acids 74 and the number of amino acids appearing in the genetic code 20. Let us write these numbers as follows:
+\begin{equation}
+20 = 2 \times 10; \quad 74 = 2 \times 37.
+\end{equation}
+In all the numbers on the right-hand sides of the equations (1, 2) there is a common multiplier 2, by which we reduce these numbers, after which we get the following series of numbers: $10 \times 37$, 10, 37. The pair of numbers (10, 37) appears in two independent ways at once: the first time as co-multipliers of the number 370, the second time separately. This may indicate some special role of this pair of numbers.\footnote{Note that $3700 = 37 \times 10 \times 10$, which also hints at the special role of the numbers 37 and 10, but 10 occurs twice in this decomposition, so we do not consider this `signature' as a direct indication of the pair (10, 37).}
+
+One could say that all this is no more than an exercise in numerology, if this pair of numbers did not play an absolutely exclusive role in the generation of all the basic set of signatures of the genetic code found by Shcherbak and Makukov. Moreover, consideration of the special properties of the pair (10, 37) is a necessary prologue to the review of these signatures.
+
+We should start with the fact that the pair of numbers (10, 37) has some remarkable mathematical properties\footnote{Here our presentation follows the paper (Shcherbak and Makukov 2013) with minimal variations.} which were discovered by Pacioli in 1508 and have been known for a long time.
+
+Let us write in the table the results of multiplying the number 37 by the natural numbers from 1 to 54 (see Table~3). If we look at three-digit multiplication results, one can see that among them there are all numbers of the form $n \times 111$, where $n$ varies from 1 to 9 (highlighted in bold). Moreover, for all of these numbers the sum of the digits of the result is equal to the multiplier of the number 37 with which this result is obtained: $3 + 3 + 3 = 9$, $6 + 6 + 6 = 18$ and so on. For all other three-digit multiplication results, the result of each column is obtained from the result of the top row by cyclic permutation of the digits, for example $2 \times 37 = 074$, $11 \times 37 = 407$, $20 \times 37 = 740$. Further, for multipliers from 28 to 54 the pattern is repeated completely, but the summand $1 \times 999$ is added to all multiplication results. In the next cycle, the addend $2 \times 999$ appears, and so on. Moreover, in all results of the form $m \times 999 + n \times 111$, the multiplier used to obtain the number is still equal to the sum of the digits of the result in a certain sense, namely, it is equal to $m \times (9 + 9 + 9) + n \times (1 + 1 + 1)$. Numbers of the form $m \times 999 + n \times 111$ play a crucial role in the information signatures of the genetic code. This is the discovery of Shcherbak and Makukov. Numbers of this form we will call Shcherbak--Makukov numbers, or SM-numbers for short. Thus, the simplest SM-numbers are of the form $n \times 111$ for $n = 1, \ldots, 9$ followed by numbers of the form $1 \times 999 + n \times 111$ and so on.
+
+\begin{table}[htbp]
+\centering
+\caption{Symmetry properties of the multiplication table of the number 37 in the base 10 positional number system}
+\label{tab:mult37}
+\footnotesize
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+037 & 074 & \textbf{111} & 148 & 185 & \textbf{222} & 259 & 296 & \textbf{333} \\
+\hline
+10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 \\
+370 & 407 & \textbf{444} & 481 & 518 & \textbf{555} & 592 & 629 & \textbf{666} \\
+\hline
+19 & 20 & 21 & 22 & 23 & 24 & 25 & 26 & 27 \\
+703 & 740 & \textbf{777} & 814 & 851 & \textbf{888} & 925 & 962 & \textbf{999} \\
+\hline
+28 & 29 & 30 & 31 & 32 & 33 & 34 & 35 & 36 \\
+999+037 & 999+074 & 999+\textbf{111} & 999+148 & 999+185 & 999+\textbf{222} & 999+259 & 999+296 & 999+\textbf{333} \\
+\hline
+37 & 38 & 39 & 40 & 41 & 42 & 43 & 44 & 45 \\
+999+370 & 999+407 & 999+\textbf{444} & 999+481 & 999+518 & 999+\textbf{555} & 999+592 & 999+629 & 999+\textbf{666} \\
+\hline
+46 & 47 & 48 & 49 & 50 & 51 & 52 & 53 & 54 \\
+999+703 & 999+740 & 999+\textbf{777} & 999+814 & 999+851 & 999+\textbf{888} & 999+925 & 999+962 & 999+\textbf{999} \\
+\hline
+\end{tabular}
+\end{table}
+
+Note that at least one SM-number can be found already at the second information level, without using the masses of the side chains of the amino acids. No matter how you calculate the weight of the second Rumer's octet, either with the assumption of the zero weight of the stop signal, or with the assumption of a weight equal to 74, the result turns out to be a Shcherbak--Makukov number:
+\begin{align*}
+M_{stop} = 0 &\Rightarrow 4218 = 4 \times 999 + 222 \\
+M_{stop} = 74 &\Rightarrow 4440 = 4 \times 999 + 444.
+\end{align*}
+The surprising elegance of the latter variant may be an additional indication of the preference for the choice of `full weight' 74 for the \textbf{stop} signal (these signatures were not noticed by Shcherbak and Makukov).
+
+At first glance, Table~3 presents special properties of the number 37, but in fact this curious arithmetic is only obtained in the positional number system with base 10, that is, these are the properties of the pair of numbers (10, 37). The number pair (10, 37) is not unique in this respect. Any pair of integers $(q, 111_q / 3)$, where $q = 4, 7, 10, 13, \ldots$ and $111_q$ means 111 in the positional number system with base $q$ (namely: $111_q = 1 \times q^2 + 1 \times q + 1$), has similar properties (in addition to the multiplication table above, they have some other curious properties that we have not touched upon here [see Shcherbak and Makukov 2013]). This means that, although the properties of the pair (10, 37) are interesting, we should not overestimate the degree of unusualness of these properties.
+
+From this point on, we will use a different way of counting weights by codon groups than we used at the second information level (see Section~4), when we counted each cell of the genetic code table separately. By going through the genetic code table in different ways (see below), we will count the weight of each coding product (or the weight of the side chain corresponding to that product) for each column of the table where it occurs only once, without taking into account the degree of degeneracy of that product in that column. This counting rule is rather non-trivial (proposed and used by Shcherbak and Makukov), and there is no \textit{a priori} justification for it. However, the point is that the information signatures given below are obtained in this way and no other, so this counting method is justified \textit{a posteriori}.
+
+Let us now list the information structures of the genetic code obtained using the weights of the side chains of amino acids (the third information level). Most of them have the form of Shcherbak--Makukov numbers or are related to such numbers. There are many such structures.
+
+\subsection*{Signature 3.1. Side Chains of the First and Second Octet and the Egyptian Triangle}
+
+Let us start with the first Rumer octet, which, as mentioned above, seems to be more fundamental than the second one. The sum of the amino acid side chain weights using the Shcherbak--Makukov counting rule and taking into account the proline `activation key' (artificial redefinition of the side chain weight and the constant part for proline $42 \to 41$, $73 \to 74$) is SM-number 333 (see Table~4):
+\begin{equation}
+\text{side chains of the octet \textbf{I}: } 333 = 37 \times 9.
+\end{equation}
+
+\begin{table}[htbp]
+\centering
+\caption{The sums of amino acid weights of octet I}
+\label{tab:octet1}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|}
+\hline
+amino acid & G & A & S & P & V & T & L & R & $\Sigma$ \\
+\hline
+side chain & 1 & 15 & 31 & 41 & 43 & 45 & 57 & 100 & \textbf{333} \\
+\hline
+constant part & 74 & 74 & 74 & 74 & 74 & 74 & 74 & 74 & \textbf{592} \\
+\hline
+whole weight & 75 & 89 & 105 & 115 & 117 & 119 & 131 & 174 & \textbf{925} \\
+\hline
+\end{tabular}
+\quad
+\raisebox{-0.5\height}{\includegraphics[width=2cm]{cal_tab4_octetI.png}}
+\end{table}
+
+If we now write out the sum of the weights of the constant parts of the amino acids and the total weights of the amino acids of the octet \textbf{I}, we obtain, accordingly:
+\begin{equation}
+\text{constant parts of the octet \textbf{I}: } 592 = 37 \times 16
+\end{equation}
+\begin{equation}
+\text{full weights of the octet \textbf{I}: } 925 = 37 \times 25.
+\end{equation}
+All the numbers in equations (3--5) are multiples of 37, and if we reduce them by this common multiplier, we obtain three successive squares of the integers $3^2$, $4^2$, $5^2$, which, as it is hard not to notice, together form the Egyptian triangle: $3^2 + 4^2 = 5^2$. We can also note that this representation of the Pythagorean Theorem does not appear in some accidental place, but specifically in the first octet of Rumer, which resembles the structural center of the genetic code (and is in fact its most stable part), and this signature does not require a complex rule to select the group of amino acids for which the full weight is counted. As will be seen below, the other group selection rules for counting side chain weights, while always making some \textit{a priori} sense, are more complex. It should also be noted that this signature is free from the uncertainty associated with the freedom to choose the weight of the \textbf{stop} signal, although it depends critically on the `activation key' associated with the redefinition of the proline structure. The use of the `activation key', as already mentioned, is justified \textit{ex post facto} by the fact that it does not lead to a single signature, but to many independent signatures at the same time.
+
+Using the Shcherbak--Makukov counting rule for the sum of the side-chain weights of the coding products of octet \textbf{II}, we obtain the sum of the weights, which is also an SM-number: $1110 = 999 \times 1 + 111$ (see Table~5). Recall that we have already obtained the SM-number for octet \textbf{II} once: it was the total weight of octet \textbf{II} obtained by counting each cell of the genetic code table separately. These two signatures are independent of each other.
+
+\begin{table}[htbp]
+\centering
+\caption{The sums of amino acid weights of octet II. The order of presentation of the amino acids in the table corresponds to the movement from left to right in each row of the genetic code (see Fig.~1) and from top to bottom in each column of the genetic code}
+\label{tab:octet2}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|}
+\hline
+amino acid & F & L & Y & stop & C & stop & W & H & Q $\rightarrow$ \\
+\hline
+side chain & 91 & 57 & 107 & 0 & 47 & 0 & 130 & 81 & $72 \rightarrow$ \\
+\hline
+constant part & 74 & 74 & 74 & 0 & 74 & 0 & 74 & 74 & $74 \rightarrow$ \\
+\hline
+amino acid & I & M & N & K & S & R & D & E & $\Sigma$ \\
+\hline
+side chain & 57 & 75 & 58 & 72 & 31 & 100 & 59 & 73 & \textbf{999+111} \\
+\hline
+constant part & 74 & 74 & 74 & 74 & 74 & 74 & 74 & 74 & \textbf{999+111} \\
+\hline
+\end{tabular}
+\quad
+\raisebox{-0.5\height}{\includegraphics[width=2cm]{cal_tab5_octetII.png}}
+\end{table}
+
+There is probably one more signature associated with octet \textbf{II}. If we assume that the total weight of the \textbf{stop} signal is zero (thus the weight of the constant part of the \textbf{stop} signal is also zero), then the total weight of the constant parts of octet \textbf{II} when counting by the Shcherbak--Makukov rule gives the SM-number $999 \times 1 + 111$. In other words, there is an additional equilibrium of the weights of the side and constant parts of octet \textbf{II}: $999 \times 1 + 111 = 999 \times 1 + 111$. For the more `reasonable' assumption $M_{stop} = 74$ this equilibrium is broken.
+
+
+\subsection*{Signature 3.2. Codons with Two Identical Bases}
+
+There are 36 codons that contain two identical bases and another base that is different from these two bases. This group of bases can be divided into two halves in such a way that in one group there will be codons in which a pair of identical bases are pyrimidines, and in the other group -- purines. Then the sums of the weights of each of the halves are equal (equilibrium of weights) and equal to the Shcherbak--Makukov number 999 (see Tables~6 and 7). This is the first example of selection of amino acid groups for summation of weights, which makes sense a priori, but which is rather complicated in comparison with Signature~3.1.
+
+\begin{table}[htbp]
+\centering
+\caption{The weight of the side chains of the codons in which one pair of identical bases is a pyrimidine and the other is a different base}
+\label{tab:pyrimidine_pairs}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+TTC & TTA & TTG & CCT & CCA & CCG \\
+\textbf{F} 91 & \textbf{L} 57 & \textbf{L} 57 & \textbf{P} 41 & \textbf{P} 41 & \textbf{P} 41 \\
+\hline
+CTT & ATT & GTT & TCC & ACC & GCC \\
+\textbf{L} 57 & \textbf{I} 57 & \textbf{V} 43 & \textbf{S} 31 & \textbf{T} 45 & \textbf{A} 15 \\
+\hline
+TCT & TAT & TGT & CTC & CAC & CGC \\
+\textbf{S} 31 & \textbf{Y} 107 & \textbf{C} 47 & \textbf{L} 57 & \textbf{H} 81 & \textbf{R} 100 \\
+\hline
+\multicolumn{6}{|c|}{$\Sigma = 999$} \\
+\hline
+\end{tabular}
+\quad
+\raisebox{-0.5\height}{\includegraphics[width=2cm]{cal_tab6_pyrimidine.png}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{The weight of the side chains of the codons in which one pair of identical bases is a purine and the other is a different base. Different filling colors on the genetic code diagram correspond to different subgroups of codons in the table separated by a double line}
+\label{tab:purine_pairs}
+\begin{tabular}{|c|c|c||c|c|c|}
+\hline
+ & AAT & & GGT & GGC & GGA \\
+\multirow{2}{*}{N 58} & AAC & AAG & \textbf{G} 1 & \textbf{G} 1 & \textbf{G} 1 \\
+ & \textbf{N} 58 & \textbf{K} 72 & & & \\
+\hline
+TAA & CAA & GAA & TGG & CGG & AGG \\
+\textbf{stop} 0 & \textbf{Q} 72 & \textbf{E} 73 & \textbf{W} 130 & \textbf{R} 100 & \textbf{R} 100 \\
+\hline
+ATA & ACA & AGA & GTG & GCC & GAG \\
+\textbf{I} 57 & \textbf{T} 45 & \textbf{R} 100 & \textbf{V} 43 & \textbf{A} 15 & \textbf{E} 73 \\
+\hline
+\multicolumn{6}{|c|}{$\Sigma = 999$} \\
+\hline
+\end{tabular}
+\quad
+\raisebox{-0.5\height}{\includegraphics[width=2cm]{cal_tab7_purine.png}}
+\end{table}
+
+Shcherbak and Makukov showed that there is a variant of splitting completely homogeneous and completely heterogeneous groups in half, when some SM-numbers are obtained for the sums, but this is a special choice among many otherwise equal variants, not based on any \textit{a priori} clear rule (like purines on one side, pyrimidines on the other), so this result may be considered as a result of fitting. We do not present it here.
+
+
+\subsection*{Signature 3.3. Triple Symmetry of Codons with Two Identical Bases Which Are Purines}
+
+A group of codons in which a pair of identical bases are purines (with weight 999, see Signature~3.2.\ and Table~7) can be divided into three equal-size subgroups according to the following principle: the first group contains two bases A in a row, the second group contains two bases G in a row, the third group contains either two bases A separated by another base or two bases G separated by another base. These three groups are separated by double lines in Table~7. It turns out that the sum of the masses of the side chains of each subgroup is equal to the SM-number 333. In other words, there is a triple equilibrium of the subgroups, and the equilibrium number is an SM-number.
+
+
+\subsection*{Signature 3.4. Codons with Two Identical Bases and a Single Purine or a Single Pyrimidine}
+
+If, in a group of codons with two identical bases and a different third base (as in Signature~3.2.), we consider separately codons with single purine and single pyrimidine, it turns out that the corresponding sums of the side chain weights are SM-numbers separately: for single purine 888 (see Table~8); for single pyrimidine $1 \times 999 + 111$ (see Table~9). The independent signature here is the SM-number property of each sum individually.
+
+\begin{table}[htbp]
+\centering
+\caption{Two identical bases and a different third single purine}
+\label{tab:single_purine}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+TTC & CCT & AAT & AAC & GGT & GGC \\
+\textbf{F} 91 & \textbf{P} 41 & \textbf{N} 58 & \textbf{N} 58 & \textbf{G} 1 & \textbf{G} 1 \\
+\hline
+CTT & TCC & TAA & CAA & TGG & CGG \\
+\textbf{L} 57 & \textbf{S} 31 & \textbf{stop} 0 & \textbf{Q} 72 & \textbf{W} 130 & \textbf{R} 100 \\
+\hline
+TCT & CTC & ATA & ACA & GTG & GCG \\
+\textbf{S} 31 & \textbf{L} 57 & \textbf{I} 57 & \textbf{T} 45 & \textbf{V} 43 & \textbf{A} 15 \\
+\hline
+\multicolumn{6}{|c|}{$\Sigma = 888$} \\
+\hline
+\end{tabular}
+\quad
+\raisebox{-0.5\height}{\includegraphics[width=2cm]{cal_tab8_single_purine.png}}
+\end{table}
+
+Table~9 is constructed by a simple symmetry principle. The first row contains codons with a single pyrimidine in the last position, where the first two bases are the same. The next two rows are obtained by cyclic clockwise rearrangement of the single pyrimidine position. The sum of the second row is 333, which is an independent SM-signature. The total is $1 \times 999 + 111 = 333 + 777$.
+
+\begin{table}[htbp]
+\centering
+\caption{Two identical bases and a different third single pyrimidine. The group of codons with the sum of weights 333 is highlighted in black on the genetic code diagram}
+\label{tab:single_pyrimidine}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+TTA & TTG & CCA & CCG & AAG & GGA & $\Sigma$ \\
+\textbf{L} 57 & \textbf{L} 57 & \textbf{P} 41 & \textbf{P} 41 & \textbf{K} 72 & \textbf{G} 1 & 269 \\
+\hline
+ATT & GTT & ACC & GCC & GAA & AGG & \\
+\textbf{I} 57 & \textbf{V} 43 & \textbf{T} 45 & \textbf{A} 15 & \textbf{E} 73 & \textbf{R} 100 & 333 \\
+\hline
+TAT & TGT & CAC & CGC & AGA & GAG & \\
+\textbf{Y} 107 & \textbf{C} 47 & \textbf{H} 81 & \textbf{R} 100 & \textbf{R} 100 & \textbf{E} 73 & 508 \\
+\hline
+\multicolumn{7}{|c|}{$\Sigma = 1 \times 999 + 111 = 333 + 777$} \\
+\hline
+\end{tabular}
+\quad
+\raisebox{-0.5\height}{\includegraphics[width=2cm]{cal_tab9_single_pyrimidine.png}}
+\end{table}
+
+
+\subsection*{Signature 3.5. Total Weights of Codons with First Pyrimidine or First Purine}
+
+If we divide all 64 codons into two groups according to whether the first base is a pyrimidine or a purine, and calculate the sum of the total weights of the coding products (not taking degeneracy into account, with stop weight = 74), the sum for codons with first pyrimidine equals $1 \times 999 + 777$ (see Table~10), and the sum for codons with first purine equals $1517 = 41 \times 37$ (see Table~11). The latter is not an SM-number but is a multiple of 37. These two signatures were missing from Shcherbak and Makukov (2013).
+
+\begin{table}[htbp]
+\centering
+\caption{Total weight of the coding products corresponding to codons with the first pyrimidine}
+\label{tab:first_pyrimidine}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+TTY & TTR & TCN & TAY & TAR & TGY & \\
+\textbf{F} 165 & \textbf{L} 131 & \textbf{S} 105 & \textbf{Y} 181 & \textbf{stop} 74 & \textbf{C} 121 & \\
+\hline
+TGA & TGG & CTN & CCN & CAY & CAR & CGN \\
+\textbf{stop} 74 & \textbf{W} 204 & \textbf{L} 131 & \textbf{P} 115 & \textbf{H} 155 & \textbf{Q} 146 & \textbf{R} 174 \\
+\hline
+\multicolumn{7}{|c|}{$\Sigma = 1 \times 999 + 777$} \\
+\hline
+\end{tabular}
+\quad
+\raisebox{-0.5\height}{\includegraphics[width=2cm]{cal_tab10_first_pyrimidine.png}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Total weight of the coding products corresponding to the codons with the first purine}
+\label{tab:first_purine}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+ATH & ATG & ACN & AAY & AAR & AGY & \\
+\textbf{I} 131 & \textbf{M} 149 & \textbf{T} 119 & \textbf{N} 132 & \textbf{K} 146 & \textbf{S} 105 & \\
+\hline
+AGR & GTN & GCN & GAY & GAR & GGN & \\
+\textbf{R} 174 & \textbf{V} 117 & \textbf{A} 89 & \textbf{D} 133 & \textbf{E} 147 & \textbf{G} 75 & \\
+\hline
+\multicolumn{7}{|c|}{$\Sigma = 1517 = 41 \times 37$} \\
+\hline
+\end{tabular}
+\quad
+\raisebox{-0.5\height}{\includegraphics[width=2cm]{cal_tab11_first_purine.png}}
+\end{table}
+
+
+\subsection*{Signature 3.6. Decomposition of Codons}
+
+Each codon can be mentally decomposed into its constituent bases, with each base assigned the weight of the product encoded by the original codon. The sum of the side chain weights on all single bases, taking degeneracy into account, is the SM-number $10 \times 999 + 222$.
+
+This signature is not independent -- it can be derived from the octets ($3700 + 4440 = 8140$, minus $74 \times 64$ constant parts $= 3404$, also divisible by 37; multiply by 3 for separate bases: $37 \times 3 = 111$, so necessarily an SM-number: $3404 \times 3 = 10 \times 999 + 222$).
+
+However, the sum for base T separately equals the SM-number $2 \times 999 + 666$, which is independent. The sum for C, G, A together equals $7 \times 999 + 555$, which follows since the difference of SM-numbers is an SM-number.
+
+
+\subsection*{Signature 3.7. Rumer Pairs M = (T, G) and K = (C, A)}
+
+If we divide the columns of the genetic code table by whether the first base belongs to the Rumer pair $\text{M} = (\text{T}, \text{G})$ or $\text{K} = (\text{C}, \text{A})$, we obtain the following side chain weights.
+
+\begin{table}[htbp]
+\centering
+\caption{Sum of the side chain masses of codons with the first base belonging to the pair M = (T, G)}
+\label{tab:halfM_first}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+amino acid & F & L & Y & stop & C & stop & W & S & $\rightarrow$ \\
+\hline
+side chain & 91 & 57 & 107 & 0 & 47 & 0 & 130 & 31 & $\rightarrow$ \\
+\hline
+amino acid & V & A & D & E & G & & & & $\Sigma$ \\
+\hline
+side chain & 43 & 15 & 59 & 73 & 1 & & & & \textbf{654} \\
+\hline
+\end{tabular}
+\quad
+\raisebox{-0.5\height}{\includegraphics[width=2cm]{cal_tab12_M_first.png}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Sum of the side chain masses of codons with the first base belonging to the pair K = (C, A)}
+\label{tab:halfK_first}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+amino acid & L & P & H & Q & R & I & M & N & $\rightarrow$ \\
+\hline
+side chain & 57 & 41 & 81 & 72 & 100 & 57 & 75 & 58 & $\rightarrow$ \\
+\hline
+amino acid & K & S & R & T & & & & & $\Sigma$ \\
+\hline
+side chain & 72 & 31 & 100 & 45 & & & & & \textbf{789} \\
+\hline
+\end{tabular}
+\quad
+\raisebox{-0.5\height}{\includegraphics[width=2cm]{cal_tab13_K_first.png}}
+\end{table}
+
+The individual sums 654 and 789 do not divide by 37 and are not individually interesting. However, their sum $789 + 654 = 1 \times 999 + 444$, which is an SM-number, but this is not independent since it follows from Signature~3.1.
+
+If we use the middle (second) base of the codon for grouping instead, we obtain: group~M $= 789$ (Table~14), group~K $= 654$ (Table~15) -- the same values with permutation accuracy, and algebraically independent.
+
+\begin{table}[htbp]
+\centering
+\caption{Sum of side chain masses of codons with the second base belonging to the pair M}
+\label{tab:groupM_second}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+amino acid & F & L & L & I & M & V & C & $\rightarrow$ & \\
+\hline
+side chain & 91 & 57 & 57 & 57 & 75 & 43 & 47 & $\rightarrow$ & \\
+\hline
+amino acid & stop & W & R & S & R & G & & $\Sigma$ & \\
+\hline
+side chain & 0 & 130 & 100 & 31 & 100 & 1 & & \textbf{789} & \\
+\hline
+\end{tabular}
+\quad
+\raisebox{-0.5\height}{\includegraphics[width=2cm]{cal_tab14_M_second.png}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Sum of side chain masses of codons with the second base belonging to the pair K}
+\label{tab:groupK_second}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+amino acid & S & P & T & A & Y & stop & H & Q & $\rightarrow$ \\
+\hline
+side chain & 31 & 41 & 45 & 15 & 107 & 0 & 81 & 72 & $\rightarrow$ \\
+\hline
+amino acid & N & K & D & E & & & & & $\Sigma$ \\
+\hline
+side chain & 58 & 72 & 59 & 73 & & & & & \textbf{654} \\
+\hline
+\end{tabular}
+\quad
+\raisebox{-0.5\height}{\includegraphics[width=2cm]{cal_tab15_K_second.png}}
+\end{table}
+
+Furthermore, if we consider both first codons in M and both first codons in K, we get a balance of 369 = 369 (Table~16), which is algebraically independent.
+
+\begin{table}[htbp]
+\centering
+\caption{Weights of groups of coding products with both the first codons belonging to the M or K groups of bases}
+\label{tab:balance_MK}
+\begin{tabular}{|c|c|c|c||c|c|c|}
+\hline
+\multicolumn{4}{|c||}{Both first bases in M} & \multicolumn{3}{c|}{Both first bases in K} \\
+\hline
+TTY & TTR & TGY & TGA & CCN & CAY & CAR \\
+\textbf{F} 91 & \textbf{L} 57 & \textbf{C} 47 & \textbf{stop} 0 & \textbf{P} 41 & \textbf{H} 81 & \textbf{Q} 72 \\
+\hline
+TGG & GTN & GGN & & ACN & AAY & AAR \\
+\textbf{W} 130 & \textbf{V} 43 & \textbf{G} 1 & & \textbf{T} 45 & \textbf{N} 58 & \textbf{K} 72 \\
+\hline
+\multicolumn{4}{|c||}{$\Sigma = 369$} & \multicolumn{3}{c|}{$\Sigma = 369$} \\
+\hline
+\end{tabular}
+\quad
+\raisebox{-0.5\height}{\includegraphics[width=2cm]{cal_tab16_MK_both.png}}
+\end{table}
+
+
+\section{The Third Information Level (continued). The TGA-switch}
+
+The standard genetic code contains an element that disrupts some of the symmetries discussed above: the codon TGA encodes \textbf{stop}, whereas the `symmetric' expectation would be that it encodes cysteine (\textbf{C}). Let us consider the symmetrized genetic code:
+\begin{equation}
+\text{TGA} : \textbf{stop} \to \text{TGA} : \textbf{C}.
+\end{equation}
+This symmetrization exists in nature as the euplotidium alternative code.
+
+The symmetrization destroys the second information level signatures but creates new ones at the third level. We propose treating this as a two-position switch:
+\begin{equation}
+\text{TGA} : \textbf{stop} \leftrightarrow \text{TGA} : \textbf{C}.
+\end{equation}
+
+\begin{table}[htbp]
+\centering
+\caption{The ideogram of the second octet of the symmetrized genetic code (see text for explanation)}
+\label{tab:ideogram_symm}
+\footnotesize
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+group & \multicolumn{2}{c|}{\textbf{III}} & \multicolumn{12}{c|}{\textbf{II}} & \multicolumn{2}{c|}{\textbf{I}} \\
+\hline
+product & \textbf{C} & \textbf{I} & \textbf{stop} & \textbf{S} & \textbf{L} & \textbf{N} & \textbf{D} & \textbf{Q} & \textbf{K} & \textbf{E} & \textbf{H} & \textbf{F} & \textbf{R} & \textbf{Y} & \textbf{M} & \textbf{W} \\
+$M_{\text{side}}$ & 47 & 57 & 0 & 31 & 57 & 58 & 59 & 72 & 72 & 73 & 81 & 91 & 100 & 107 & 75 & 130 \\
+\hline
+base 1 & T & A & T & A & T & A & G & C & A & G & C & T & A & T & A & T \\
+base 2 & G & T & A & G & T & A & A & A & A & A & A & T & G & A & T & G \\
+base 3 & H & H & R & Y & R & Y & Y & R & R & R & Y & Y & R & Y & G & G \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Signature 3.1B: Symmetries of Base 1 Line.} In the symmetrized code, the first and last five bases of the Base~1 line are symmetric (TATAT pattern), and the central segment AGC$|$AGC is mirror symmetric.
+
+\paragraph{Signature 3.2B: Base 2 Line.} The Base~2 line of the symmetrized code is exactly mirror symmetric.
+
+\paragraph{Signature 3.3B: Symmetry between Degeneracy Groups.}
+
+\begin{table}[htbp]
+\centering
+\caption{Symmetry of the second bases of the first octet and the central part of the second octet}
+\label{tab:degeneracy_symm}
+\begin{tabular}{|l|l|c|c|c|c|c|c|c|c|}
+\hline
+ & product & G & A & S & P & V & T & L & R \\
+\cline{2-10}
+Octet \textbf{I}, group \textbf{IV} & $M_{\text{side}}$ & 1 & 15 & 31 & 41 & 43 & 45 & 57 & 100 \\
+\cline{2-10}
+ & base 2 & R & Y & Y & Y & Y & Y & Y & R \\
+\hline
+\hline
+ & base 2 & Y & R & R & R & R & R & R & Y \\
+\cline{2-10}
+Octet \textbf{II}, group \textbf{II} & $M_{\text{side}}$ & 57 & 58 & 59 & 72 & 72 & 73 & 81 & 91 \\
+\cline{2-10}
+ & product & L & N & D & Q & K & E & H & F \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Signature 3.4B: Virtual Codons.}
+
+\begin{table}[htbp]
+\centering
+\caption{The ideogram of the second octet of the symmetrized genetic code and the virtual codons (see text for explanation)}
+\label{tab:virtual_codons}
+\footnotesize
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+group & \multicolumn{2}{c|}{\textbf{III}} & \multicolumn{12}{c|}{\textbf{II}} & \multicolumn{2}{c|}{\textbf{I}} & $\Sigma$ \\
+\hline
+product & \textbf{C} & \textbf{I} & \textbf{stop} & \textbf{S} & \textbf{L} & \textbf{N} & \textbf{D} & \textbf{Q} & \textbf{K} & \textbf{E} & \textbf{H} & \textbf{F} & \textbf{R} & \textbf{Y} & \textbf{M} & \textbf{W} & \\
+$M_{\text{side}}$ & 47 & 57 & 0 & 31 & 57 & 58 & 59 & 72 & 72 & 73 & 81 & 91 & 100 & 107 & 75 & 130 & \\
+\hline
+base 2 & G & T & A & G & T & A & A & A & A & A & A & T & G & A & T & G & \\
+\hline
+v-product & $-$ & \multicolumn{2}{c|}{\textbf{stop}} & \multicolumn{2}{c|}{\textbf{stop}} & \multicolumn{4}{c|}{\textbf{K}} & \multicolumn{4}{c|}{\textbf{start/M}} & \multicolumn{3}{c|}{\textbf{start/M}} & \\
+$M_{\text{side}}$ & $-$ & \multicolumn{2}{c|}{0} & \multicolumn{2}{c|}{0} & \multicolumn{4}{c|}{72} & \multicolumn{4}{c|}{75} & \multicolumn{3}{c|}{75} & 222 \\
+\hline
+base 2 & G & T & A & G & T & A & A & A & A & A & T & G & A & T & G & & \\
+v-product & $-$ & \multicolumn{3}{c|}{\textbf{S}} & \multicolumn{4}{c|}{\textbf{K}} & \multicolumn{4}{c|}{\textbf{K}} & \multicolumn{2}{c|}{\textbf{C}} & \multicolumn{2}{c|}{$-$} & \\
+$M_{\text{side}}$ & $-$ & \multicolumn{3}{c|}{31} & \multicolumn{4}{c|}{72} & \multicolumn{4}{c|}{72} & \multicolumn{2}{c|}{47} & \multicolumn{2}{c|}{$-$} & 222 \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\section{The Fourth Information Level. Chain Links}
+
+At this level, the side chains of amino acids are split into sub-structures at successive positions along the chain, denoted by Greek letters $\beta$, $\gamma$, $\delta$, $\varepsilon$, $\zeta$, \ldots\ for the chain link positions starting from the $\alpha$-carbon.
+
+\subsection*{Signature 4.1. Level $\beta$ of the First Octet}
+
+\begin{table}[htbp]
+\centering
+\caption{Masses of the links of level $\beta$ for the octet~\textbf{I}}
+\label{tab:level_beta_octet1}
+\begin{tabular}{cc}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|}
+\hline
+amino acid & \textbf{G} & \textbf{A} & \textbf{S} & \textbf{P} & \textbf{V} & \textbf{T} & \textbf{L} & \textbf{R} \\
+\hline
+level $\beta$ & H & CH$_3$ & CH$_2$ & C$_2$H$_3$ & CH & CH & CH$_2$ & CH$_2$ \\
+weight & 1 & 15 & 14 & 27 & 13 & 13 & 14 & 14 \\
+\hline
+$\Sigma$ & \multicolumn{8}{c|}{111} \\
+\hline
+\end{tabular}
+&
+\raisebox{-0.5\height}{\includegraphics[width=2cm]{cal_tab20_beta_octetI.png}}
+\end{tabular}
+\end{table}
+
+The sum of the $\beta$-level weights for the first octet equals the SM-number 111.
+
+\subsection*{Signature 4.2. Levels $\beta$ and $\gamma$ of the Second Octet}
+
+\begin{table}[htbp]
+\centering
+\caption{Sum of the masses of levels $\beta$ and $\gamma$ of the whole octet~\textbf{II}}
+\label{tab:level_betagamma_octet2}
+\footnotesize
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|}
+\hline
+amino acid & \textbf{F} & \textbf{L} & \textbf{Y} & \textbf{stop} & \textbf{C} & \textbf{stop} & \textbf{W} & \textbf{H} \quad $\to$ \\
+\hline
+level $\beta$ & CH$_2$ & CH$_2$ & CH$_2$ & $-$ & CH$_2$ & $-$ & CH$_2$ & CH$_2$ \\
+weight & 14 & 14 & 14 & 0 & 14 & 0 & 14 & 14 \quad $\to$ \\
+\hline
+level $\gamma$ & C & CH & C & $-$ & SH & $-$ & CH & C \\
+weight & 12 & 13 & 12 & 0 & 33 & 0 & 13 & 12 \quad $\to$ \\
+\hline
+\end{tabular}
+
+\vspace{0.3em}
+
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|}
+\hline
+amino acid & \textbf{Q} & \textbf{I} & \textbf{M} & \textbf{N} & \textbf{K} & \textbf{S} & \textbf{R} & \textbf{D} & \textbf{E} \\
+\hline
+level $\beta$ & CH$_2$ & CH & CH$_2$ & CH$_2$ & CH$_2$ & CH$_2$ & CH$_2$ & CH$_2$ & CH$_2$ \\
+weight & 14 & 13 & 14 & 14 & 14 & 14 & 14 & 14 & 14 \\
+\hline
+level $\gamma$ & CH$_2$ & C$_2$H$_5$ & CH$_2$ & C & CH$_2$ & OH & CH$_2$ & C & CH$_2$ \\
+weight & 14 & 29 & 14 & 12 & 14 & 17 & 14 & 12 & 14 \\
+\hline
+\end{tabular}
+
+\vspace{0.3em}
+
+\begin{tabular}{|l|c|}
+\hline
+$\Sigma$ & 444 \\
+\hline
+\end{tabular}
+\hfill
+\raisebox{-0.5\height}{\includegraphics[width=2cm]{cal_tab21_betagamma_octetII.png}}
+\end{table}
+
+\subsection*{Signature 4.3. Codons with First Pyrimidine or First Purine}
+
+\begin{table}[htbp]
+\centering
+\caption{Codons with the first pyrimidine, sum of the weights for $\beta$ and $\gamma$ levels. Level weights are shown in parentheses}
+\label{tab:betagamma_pyrimidine}
+\footnotesize
+\begin{tabular}{|l|c|c|c|c|c|c|c|}
+\hline
+amino acid & TTY \textbf{F} & TTR \textbf{L} & TCN \textbf{S} & TAY \textbf{Y} & TAR \textbf{stop} & TGY \textbf{C} & $\to$ \\
+\hline
+level $\beta$ & CH$_2$\,(14) & CH$_2$\,(14) & CH$_2$\,(14) & CH$_2$\,(14) & $-$\,(0) & CH$_2$\,(14) & $\to$ \\
+\hline
+level $\gamma$ & C\,(12) & CH\,(13) & OH\,(17) & C\,(12) & $-$\,(0) & SH\,(33) & $\to$ \\
+\hline
+\hline
+amino acid & TGA \textbf{stop} & TGG \textbf{W} & CTN \textbf{L} & CCN \textbf{P} & CAY \textbf{H} & CAR \textbf{Q} & CGR \textbf{R} \\
+\hline
+level $\beta$ & $-$\,(0) & CH$_2$\,(14) & CH$_2$\,(14) & C$_2$H$_3$\,(27) & CH$_2$\,(14) & CH$_2$\,(14) & CH$_2$\,(14) \\
+\hline
+level $\gamma$ & $-$\,(0) & C\,(12) & CH\,(13) & CH$_2$\,(14) & C\,(12) & CH$_2$\,(14) & CH$_2$\,(14) \\
+\hline
+\hline
+$\Sigma$ & \multicolumn{7}{c|}{333} \\
+\hline
+\end{tabular}
+\hfill
+\raisebox{-0.5\height}{\includegraphics[width=2cm]{cal_tab22_first_pyrimidine_bg.png}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Codons with the first purine, sum of weights for $\beta$, $\delta$ and $\zeta$ levels. Level weights are shown in parentheses}
+\label{tab:betadeltazeta_purine}
+\footnotesize
+\begin{tabular}{|l|c|c|c|c|c|c|c|}
+\hline
+amino acid & ATH \textbf{I} & ATG \textbf{M} & ACN \textbf{T} & AAY \textbf{N} & AAR \textbf{K} & AGY \textbf{S} & $\to$ \\
+\hline
+level $\beta$ & CH\,(13) & CH$_2$\,(14) & CH\,(13) & CH$_2$\,(14) & CH$_2$\,(14) & CH$_2$\,(14) & $\to$ \\
+\hline
+level $\delta$ & CH$_3$\,(15) & S\,(32) & $-$\,(0) & ONH$_2$\,(32) & CH$_2$\,(14) & $-$\,(0) & $\to$ \\
+\hline
+level $\zeta$ & $-$\,(0) & $-$\,(0) & $-$\,(0) & $-$\,(0) & NH$_2$\,(16) & $-$\,(0) & $\to$ \\
+\hline
+\hline
+amino acid & AGR \textbf{R} & GTN \textbf{V} & GCN \textbf{A} & GAY \textbf{D} & GAR \textbf{E} & GGN \textbf{G} & \\
+\hline
+level $\beta$ & CH$_2$\,(14) & CH\,(13) & CH$_3$\,(15) & CH$_2$\,(14) & CH$_2$\,(14) & H\,(1) & \\
+\hline
+level $\delta$ & CH$_2$\,(14) & $-$\,(0) & $-$\,(0) & O$_2$H\,(33) & C\,(12) & $-$\,(0) & \\
+\hline
+level $\zeta$ & C\,(12) & $-$\,(0) & $-$\,(0) & $-$\,(0) & $-$\,(0) & $-$\,(0) & \\
+\hline
+\hline
+$\Sigma$ & \multicolumn{7}{c|}{333} \\
+\hline
+\end{tabular}
+\hfill
+\raisebox{-0.5\height}{\includegraphics[width=2cm]{cal_tab23_first_purine_bdz.png}}
+\end{table}
+
+
+\section{The Fifth Information Level. ARS Symmetries}
+
+Aminoacyl-tRNA synthetase (ARS) molecules realize the genetic code by linking amino acids to their corresponding tRNAs. There are two classes: ARS-1 (monomers) and ARS-2 (dimers), each containing 10 amino acids, except that lysine belongs to both classes. By artificially assigning lysine to ARS-2, we obtain two equal groups of 10 amino acids each.
+
+\begin{table}[htbp]
+\centering
+\caption{Two classes of ARS represented by their specific amino acids with the first letters of the codons (see text). Arrows indicate increasing masses of amino acids}
+\label{tab:ARS_classes}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{ARS-1 (monomers)} & \textbf{ARS-2 (dimers)} \\
+\hline
+V, C, L, I, Q, E, M, R, Y, W & G, A, S, P, T, N, D, K, H, F \\
+$\uparrow$ increasing weight & $\uparrow$ increasing weight \\
+\hline
+\end{tabular}
+\end{table}
+
+The symmetry of first bases is revealed when entries are shifted by one column. The G and C nucleotides form separate columns (indicated by black background in the original), while A and T occupy other columns. The arrangement is symmetric with respect to vertical inversion and cyclic shift.
+
+\begin{table}[htbp]
+\centering
+\caption{Amino acid numbering corresponding to ARS-1 and ARS-2 (see text). The weight accretion of amino acids of each ARS class is indicated by the intensity of the gray color of the corresponding cell}
+\label{tab:ARS_numbering}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{V} & \textbf{C} & \textbf{L} & \textbf{I} & \textbf{Q} & \textbf{E} & \textbf{M} & \textbf{R} & \textbf{Y} & \textbf{W} & ARS-1 \\
+\hline
+1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & $+$ \\
+\hline
+\textbf{G} & \textbf{A} & \textbf{S} & \textbf{P} & \textbf{T} & \textbf{N} & \textbf{D} & \textbf{K} & \textbf{H} & \textbf{F} & ARS-2 \\
+\hline
+$-10$ & $-9$ & $-8$ & $-7$ & $-6$ & $-5$ & $-4$ & $-3$ & $-2$ & $-1$ & $-$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Calligram-B. For each base C, T, A, G (following in increasing order of weight represented by gray level), the amino acids corresponding to the triplets with this first base are written out in increasing order of weight and numbered according to their position in the sequence corresponding to the ARS-1 ($+$, black text) and ARS-2 ($-$, gray text) classes (see Table~25)}
+\label{tab:calligram_B}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+C & $-7$, \textbf{P} & $+3$, \textbf{L} & $+5$, \textbf{Q} & $-2$, \textbf{H} & $+8$, \textbf{R} & $(3, 2)$ \\
+\hline
+T & $-8$, \textbf{S} & $+2$, \textbf{C} & $-1$, \textbf{F} & $+9$, \textbf{Y} & $+10$, \textbf{W} & $(3, 2)$ \\
+\hline
+A & $-6$, \textbf{T} & $+4$, \textbf{I} & $-5$, \textbf{N} & $-3$, \textbf{K} & $+7$, \textbf{M} & $(2, 3)$ \\
+\hline
+G & $-10$, \textbf{G} & $-9$, \textbf{A} & $+1$, \textbf{V} & $-4$, \textbf{D} & $+6$, \textbf{E} & $(2, 3)$ \\
+\hline
+$\Sigma$ & $-31$ & 0 & 0 & 0 & $+31$ & \\
+\hline
+ & $(0, 4)$ & $(3, 1)$ & $(2, 2)$ & $(1, 3)$ & $(4, 0)$ & \\
+\hline
+\end{tabular}
+\end{table}
+
+Monte Carlo simulations yield the following probabilities for these symmetries: $P_{\text{as}} = 1.11\%$ (antisymmetry of column sums), $P_{\text{col.sym}} = 18.8\%$ (column symmetry of ARS type distribution), $P_{\text{row.sym}} = 34.4\%$ (row symmetry of ARS type distribution), with joint probability $P = 0.378\%$.
+
+
+\section{Discussion}
+
+\subsection{Meaningful Information Structures}
+
+Do the SM-signatures represent meaningful information? All numbers from 111 to 999 have been found among the signatures. The Pythagorean theorem $3^2 + 4^2 = 5^2$ appears in the first octet. By comparison, the Cosmic Call messages sent to extraterrestrial intelligence also use mathematical structures as attention signals.
+
+The information levels 1--5 emerged naturally in our analysis, with each level requiring progressively more complex constructions and new resources. The situation resembles a puzzle -- similar to Sudoku or a system of Diophantine equations -- where finding signatures at one level motivates the search at deeper levels.
+
+\subsection{On the Estimation of the Degree of `Improbability'}
+
+The cumulative probability of the first two levels is approximately $6 \times 10^{-9}$. The 17 independent SM-numbers at the third level give $(1/111)^{17} \approx 2 \times 10^{-35}$. The total probability is approximately $10^{-45}$ or even $10^{-50}$.
+
+However, the `search at corners' problem makes a correct estimation fundamentally impossible. The analogy is that of a monkey at a typewriter: if we search for \emph{any} surprising pattern rather than a specific one, we are searching at the corners of a vast space of possibilities, and the probability of finding \emph{something} surprising is much higher than the probability of any specific surprising outcome.
+
+Our conclusion is that there is no objective way to assess the improbability of the observed information structures based on probability estimates alone.
+
+\subsection{Prospects for Solving the Accidental/Artificial Problem}
+
+The artificiality hypothesis is falsifiable in the sense of Popper: if the information signatures can be explained by biochemical or evolutionary mechanisms, the hypothesis is refuted. The accidental hypothesis, by contrast, is not falsifiable -- any set of numerical relationships can always be dismissed as coincidence.
+
+A concrete prediction follows from the artificiality hypothesis: alternative genetic codes should corrupt the information signatures. We examined 25 known alternative genetic codes. Of these, 8 break the Rumer structure (first information level), and the remaining ones break the second level signatures. This confirms the first half of the prediction. The second half of the prediction -- that no alternative information signatures should appear in alternative codes -- remains to be verified.
+
+
+\section{Conclusion}
+
+Sections~3--8 of this paper have presented a detailed overview of the strange symmetries and information patterns of the genetic code. A surprisingly large number of signatures have been found, and they naturally distribute across five information levels of increasing complexity.
+
+The first two levels are particularly simple and play the role of attention signals, analogous to those used in the practice of SETI. The information structures cannot be explained by the known functional requirements of the genetic code.
+
+The most reliable criterion for establishing artificiality would be the presence of semantic content, but the situation remains confusing in this regard. We cannot rely on small probability estimates alone due to the `search at corners' problem.
+
+The artificiality hypothesis is falsifiable via alternative genetic codes. We have tested 25 alternative codes and confirmed the first half of the prediction derived from the artificiality hypothesis: all examined alternative codes corrupt the information signatures of the standard code. Whether these alternative codes possess their own distinct information signatures remains an open question for future investigation.
+
+
+\section*{Acknowledgement}
+
+The authors thank Maxim Makukov for an extremely fruitful discussion.
+
+
+\section*{References}
+
+\begin{description}
+\item Crick, F. (1968). The Origin of the Genetic Code. \textit{Journal of Molecular Biology}, 38, 367--379.
+\item Danckwerts, H.J., and Neubert, D. (1975). Symmetries of Genetic Code-Doublets. \textit{Journal of Molecular Evolution}, 5, 327--332.
+\item Dumas, S. (2007). The 1999 and 2003 Messages Explained. URL: \url{https://www.plover.com/misc/Dumas-Dutil/messages.pdf}.
+\item Frank-Kamenetsky, M. (2018). \textit{The Most Important Molecule: From DNA Structure to XXI\textsuperscript{st} Century Biomedicine}. Alpina Publisher.
+\item Hoesl, M., Oehm, S., Durkin, P., Darmon, E., Peil, L., Aerni, H., \textit{et al.} (2015). Chemical Evolution of a Bacterial Proteome. \textit{Angewandte Chemie}, 54, 10030--10034.
+\item Hohsaka, T., Ashizuka, Y., Murakami, H., and Sisido, M. (2001). Five-Base Codons for Incorporation of Nonnatural Amino Acids into Proteins. \textit{Nucleic Acids Research}, 29, 3646--3651.
+\item Konopelchenko, B., and Rumer, Yu. (1975). Classification of Codons in the Genetic Code. \textit{DAN SSSR}, 223, 471--474. In Russian.
+\item Makukov, M., and Shcherbak, V. (2018). SETI In Vivo: Testing the We-Are-Them Hypothesis. \textit{International Journal of Astrobiology}, 17, 1--20.
+\item Marx, G. (1979). Message through Time. \textit{Acta Astronautica}, 6, 221--225.
+\item McMurry, J. (2023). \textit{Organic Chemistry: A Tenth Edition}. OpenStax, Rice University, Houston, Texas.
+\item Nikitin, M. (2016). \textit{Origin of Life. From Nebula to Cell}. Moscow: Alpina non-fiction. In Russian.
+\item Pacioli, L. (1508). \textit{De Viribus Quantitatis}. Library of the University of Bologna.
+\item Rumer, Yu. (2013). Systematization of Codons in the Genetic Code. \textit{DAN SSSR}, 183, 222--226. In Russian.
+\item Shcherbak, V., and Makukov, M. (2013). The `Wow! Signal' of the Terrestrial Genetic Code. \textit{Icarus}, 224, 228--242.
+\item Wilhelm, T., and Nikolajewa, S.N. (2004). A New Classification Scheme of the Genetic Code. \textit{Journal of Molecular Evolution}, 59, 598--605.
+\item Zaitsev, A. (2008). The First Musical Interstellar Radio Message. \textit{Journal of Communications Technology and Electronics}, 53, 1107--1113.
+\end{description}
+
+\end{document}
